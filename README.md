@@ -5,9 +5,9 @@ Simple exercise for basic DevOps infrastructure (Docker, Kubernetes, Kafka)
   * A text input and a submit button
   
 * Three microservices (Java 11 + Spring Boot)
-  *	A: receives the input from the frontend => Checks if it validates a defined regex (e.g. 3 letters followed by 4 numbers)
-  *	B: saves data to the database
-  *	C: displays data from the database
+  *	A: receives the input from the frontend => Checks if it validates a defined regex (e.g. an email).
+  *	B: determines the country of the email based on its domain (e.g. .fr is France, .ma is Morocco and so on)
+  *	C: saves data to the database and exposes the data from the database to the frontend
 
 * The database will be PostgreSQL
 
@@ -21,4 +21,4 @@ Once everything is done, a Docker file needs to be created. It takes a basic Ubu
   * Create a volume for the database, it needs to be persistent, regardless of the image/pod destruction
   * You’ll need to manage the ports and the reverse proxy / API gateway through Ingress
 
-Afterwards we will have other pods, for ElasticStack to manage the logs of all the microservices, and for Grafana for monitoring.
+Afterwards we will have other pods, for example ElasticStack to manage the logs of all the microservices, and for Grafana for monitoring.
