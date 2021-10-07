@@ -10,6 +10,7 @@ Simple exercise for basic DevOps infrastructure (Docker, Kubernetes, Kafka)
   *	C: saves data to the database and exposes the data from the database to the frontend
 
 * The database will be PostgreSQL
+* For infrastructure, we will need 4 servers, one will host GitLab, Jenkins, and Kubernetes master, 2 Kubernetes worker nodes, and the 4th will serve as a volume for the database + for future usage (ElasticStack and Grafana)
 
 B will need to be notified when A validates the input. C is standalone. Thus, we need an events pipeline (Kafka).
 
